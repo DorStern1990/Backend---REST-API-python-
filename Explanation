@@ -1,0 +1,24 @@
+SafeModePointsRectangle:
+
+This is a REST API as requested.
+The controller is implemented in app.py
+The services are implemented as a class (services) - each service is a method, which is also responsible for parsing
+body json objects if necessary (see API.md for further explanation)
+
+The REST API uses 2 classes:
+1. Dict2D (in PointsDict.py):
+    It has a dictionary field, that keeps all the points and their keys (key: int, value: tuple of floats)
+    Its main use is managing the "insert", "remove", and "get" services.
+2. Tree2D (in PointsTree.py):
+    It has a KDTree field, that keeps all the points with accordance to the dictionary.
+    It is practically updated using the dictionary's data.
+    (Note: The tree should reflect the dictionary's data, and not the other way around.)
+    Its main use is computing the points in a given rectangle.
+    given a center point and a radius, the tree provides us with all the points within a distance as long as radius from
+    the center point.
+
+Services complexity:
+    insert and remove   - O(N)
+    get                 - O(1) in average, O(N) in worst case
+    search              - O(sqrt(N) + m) [m being the amount of points that should be returned]
+
