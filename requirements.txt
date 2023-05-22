@@ -11,7 +11,7 @@ nose == 1.3.7
 numpy == 1.16.5
 
 # C:\Users\DorStern\PycharmProjects\SafeModePointsRectange\Tests\tests.py: 7
-requests == 2.22.0
+requests == 2.31.0
 
 # C:\Users\DorStern\PycharmProjects\SafeModePointsRectange\PointsTree.py: 1
 scipy == 1.3.1
